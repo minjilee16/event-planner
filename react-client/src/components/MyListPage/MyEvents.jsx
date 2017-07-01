@@ -51,7 +51,7 @@ class MyEvents extends React.Component {
                     <b>Location:</b>{data.event.venue_name}
                   </div>
                   <div className="myEventList">
-                    <b>Addres:</b>{data.event.venue_address}
+                    <b>Address:</b>{data.event.venue_address}
                   </div>
                   <div className="myEventList">
                     <b>Map: </b>
