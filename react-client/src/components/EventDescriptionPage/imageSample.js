@@ -16,7 +16,6 @@ module.exports = {
           "https://union.wisc.edu/assets/Uploads/ImageSlides/WUD-Comm-780x460-0006-PAC-3.jpg", 
           "https://static.wixstatic.com/media/200b08_dba657e620f74dbf809eafc721889535.jpg_srz_1000_750_85_22_0.50_1.20_0.00_jpg_srz",
           "https://www.ryman.com/wp-content/uploads/2016/12/ry_hdr_rickyskaggskentuckythunder_072717.jpg",
-          "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjCmYjgg-vUAhXpjFQKHVvbBRwQjBwIBA&url=https%3A%2F%2Fi0.wp.com%2Fedinburgedc.com%2Fwp-content%2Fuploads%2F2014%2F07%2Fthe-spaghetti-western-orchestra-tickets-heymann-performing-arts-center_13038986836278.jpg%3Ffit%3D3600%252C2400&psig=AFQjCNFcYHjN10IxA5ofNNYvf15tWQmCnw&ust=1499099711147502",
           "http://www.hunter.cuny.edu/educationabroad/repository/images/india-photos/mohiniyattam-by-kalamandalam-ms-ajitha-group.jpg/image_large",
           "http://floridaschoolofmassage.com/wp-content/uploads/2015/06/ballet_0.jpg",
           "http://performingarts.reviews/wp-content/uploads/2015/05/PerformingArtsReview.gif",
