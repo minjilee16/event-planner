@@ -2,10 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import images from './imageSample.js'
-console.log('image:::', images);
-
-
-// var randomNumberBetween0and4 = Math.floor(Math.random() * 4);
 
 class EventDescriptionPage extends React.Component {
   
@@ -20,9 +16,6 @@ class EventDescriptionPage extends React.Component {
   render () {
     return (
       <div id="wrapUpTwoSection">
-      {console.log('look', this.props.selectedEvent)}
-      {console.log('catagory', this.props.eventCategory)}
-      {console.log('randomNumber', this.props.indexForImages)}
         <section id="eventDescriptionInfoText">
           <h2 id="desTitle">{this.props.selectedEvent.title} </h2><br/>
             { this.props.eventCategory === "Concerts" ? <img id="eventImage" src= {images.concerts[this.props.indexForImages]}/> : null} <br/>

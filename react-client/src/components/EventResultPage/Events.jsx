@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
-var randomNumberBetween0and4 = Math.floor(Math.random() * 4);
-
 class Events extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +42,7 @@ class Events extends React.Component {
                         { event.image !== null ? <img src={event.image.medium.url}/> : <img src="http://s4.evcdn.com/images/block250/I0-001/024/825/663-1.jpeg_/mj-live-michael-jackson-tribute-concer-63.jpeg"/> }
                       </div>
                       <div className="eventSmallDes">
-                        <a id="resultTitle" onClick={this.eventDescriptionPage.bind(this)} href="#descriptionPage" className="eventTitle" title={event.title}>{event.title.slice(0,18)}</a><br/>
+                        { event.title !== null ? <a id="resultTitle" onClick={this.eventDescriptionPage.bind(this)} href="#descriptionPage" className="eventTitle" title={event.title}>{event.title.slice(0,18)}</a> : null } <br/> 
                         <a id="resultTitle" onClick={this.eventDescriptionPage.bind(this)} href="#descriptionPage" className="eventTitle" title={event.title}>{event.title.slice(18,38)}</a><br/>
                         <a id="resultTitle" onClick={this.eventDescriptionPage.bind(this)} href="#descriptionPage" className="eventTitle" title={event.title}>{event.title.slice(38,58)}</a><br/>
                         <span className="eventVenueName">{event.venue_name.slice(0,25)}</span> <br/>
