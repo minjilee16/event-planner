@@ -169,6 +169,7 @@ tr, td {
   -webkit-transition:all .35s;
   -moz-transition:all .35s;
   transition:all .35s;
+  
 }
 #deleteButton:hover {
   background-color: #D91463;

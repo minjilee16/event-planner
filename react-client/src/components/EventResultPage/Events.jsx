@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
+var randomNumberBetween0and4 = Math.floor(Math.random() * 4);
 
 class Events extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedEvent: ''
+      selectedEvent: '',
+      index : null
     }
   }
 
@@ -17,7 +19,8 @@ class Events extends React.Component {
     for ( var i = 0; i < events.length; i++) {
       if( events[i].title === selectedTitle ) {
         this.setState({
-          selectedEvent: events[i]
+          selectedEvent: events[i],
+          index: i
         },  this.sendSelectedEventToTopComponent )
       }
     }
@@ -25,7 +28,7 @@ class Events extends React.Component {
   }
 
   sendSelectedEventToTopComponent() {
-    this.props.description(this.state.selectedEvent);
+    this.props.description(this.state.selectedEvent, this.state.index);
   }
 
   render () {

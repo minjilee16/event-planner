@@ -49,16 +49,12 @@ app.post('/events', function(req, res) {
         month = "December";
         break;
   }
-
   var day = req.body.eventDate.slice(3);
-
   var options = {
     url: `http://api.eventful.com/json/events/search?app_key=HXWRVg4cwThzKRdQ&q=${req.body.eventSelected}&l=${req.body.eventLocation}&when=${month}+${day}`,
     method: 'GET'
-
   }
   request(options, function(err, response, body){
-
     if(JSON.parse(body).events) {
       res.send(JSON.parse(body).events.event);
     } else res.send('Wrong Entry!');
@@ -76,9 +72,9 @@ app.post('/retrieve', function(req, res) {
   helper.dbLookup(req, res);
 });
 
+
 app.post('/delete', function(req, res) {
   helper.deleteEvent(req, res);
-
 });
 
 

@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import images from './imageSample.js'
+console.log('image:::', images);
+
+
+// var randomNumberBetween0and4 = Math.floor(Math.random() * 4);
 
 class EventDescriptionPage extends React.Component {
   
@@ -15,9 +20,15 @@ class EventDescriptionPage extends React.Component {
   render () {
     return (
       <div id="wrapUpTwoSection">
+      {console.log('look', this.props.selectedEvent)}
+      {console.log('catagory', this.props.eventCategory)}
+      {console.log('randomNumber', this.props.indexForImages)}
         <section id="eventDescriptionInfoText">
           <h2 id="desTitle">{this.props.selectedEvent.title} </h2><br/>
-            <img id="eventImage" src="https://eevents.s3.amazonaws.com/images/og/concert.jpg"/><br/>
+            { this.props.eventCategory === "Concerts" ? <img id="eventImage" src= {images.concerts[this.props.indexForImages]}/> : null} <br/>
+            { this.props.eventCategory === "PerformingArts" ? <img id="eventImage" src= {images.arts[this.props.indexForImages]} /> : null} <br/>
+            { this.props.eventCategory === "Sports" ? <img id="eventImage" src= {images.sports[this.props.indexForImages]} /> : null} <br/>
+            { this.props.eventCategory === "" ? <img id="eventImage" src= {images.sports[this.props.indexForImages]} /> : null} <br/>
           <div className="selectedData"> 
             <b>Description: </b>{this.props.selectedEvent.description}<br/>
           </div>

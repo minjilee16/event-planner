@@ -20,7 +20,8 @@ class App extends React.Component {
       allEvents: null,
       myListClick: null,
       selectedEvent: null,
-      savedEvents: []
+      savedEvents: [],
+      randomIndex: null
     }
   }
 
@@ -112,9 +113,10 @@ class App extends React.Component {
     })
   }
 
-  changeSetStateFromDescriptionPage (selectedEventObject) {
+  changeSetStateFromDescriptionPage (selectedEventObject, index) {
     this.setState({
-      selectedEvent: selectedEventObject
+      selectedEvent: selectedEventObject,
+      randomIndex: index
     })
   }
 
@@ -151,7 +153,7 @@ class App extends React.Component {
           { this.state.selectedEvent !== null ? <ResultBar name={this.state.userName} location={this.state.location} data={this.state.date} eventType={this.state.eventType} allEvents={this.state.allEvents} changeMyList={this.changeSetStateFromMyListButton.bind(this)}  myEventClick={this.getDataFromDatabaseForMyEventList.bind(this)}/> : null }
           </div>
           <div id="description">
-          { this.state.selectedEvent !== null ?  <EventDescriptionPage  selectedEvent={this.state.selectedEvent} addEventToMyEvents={this.dataFromDescriptionPage.bind(this)}/> : null }
+          { this.state.selectedEvent !== null ?  <EventDescriptionPage  indexForImages = {this.state.randomIndex} eventCategory={this.state.eventType} selectedEvent={this.state.selectedEvent} addEventToMyEvents={this.dataFromDescriptionPage.bind(this)}/> : null }
           </div>
         </div>
         <div id="myEventsList">
