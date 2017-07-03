@@ -1,7 +1,6 @@
 const Users = require('../database-mongo/index.js');
 
 exports.dbLookup = (req, res) => {
-
   Users.find({userName: req.body.userName}).sort({date: 1}).exec((err, result) => {
     if (err) {
       throw err;
