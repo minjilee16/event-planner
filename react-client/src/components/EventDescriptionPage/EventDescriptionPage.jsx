@@ -14,11 +14,6 @@ class EventDescriptionPage extends React.Component {
   }
 
   render () {
-    var des = this.props.selectedEvent.description; 
-    var div = document.createElement("div");
-    div.innerHTML = des; 
-    console.log('INNERHTML::', div.innerHTML);
-
     return (
       <div id="wrapUpTwoSection">
         <section id="eventDescriptionInfoText">

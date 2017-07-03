@@ -32,7 +32,7 @@ class Events extends React.Component {
   render () {
     return (
       <div className ="allEvents">
-        {this.props.events === null ? null : 
+        {this.props.events === null ? <h2 className="emptyEvents">There are no events</h2> : 
           this.props.events.map((event, index) =>  {
             return (
               <div key={index} className="eachEvent">

@@ -6,6 +6,9 @@ import $ from 'jquery';
 class ResultBar extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      zero: 0
+    }
   }
 
   myEventsListOnClick() {
@@ -28,8 +31,8 @@ class ResultBar extends React.Component {
             <td id="clientInfo">
               Welcome, <b>{this.props.name}</b> <br/>
               <b>{this.props.eventType}</b> Events in <b>{this.props.location}</b> on <b> {this.props.data} </b><br/>
-              <div id="length">
-                We have <b>{ this.props.allEvents === null ?  0 : this.props.allEvents.length }</b> events
+              <div id="length">    
+                We have <b>{ this.props.allEvents === null || this.props.allEvents === "Wrong Entry!" ?  "0" : this.props.allEvents.length }</b> events
               </div>
             </td>
             <td id="myEventClick">
